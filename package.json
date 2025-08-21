@@ -1,0 +1,92 @@
+{
+  "name": "@gabrielmaialva33/mcp-filesystem",
+  "version": "1.6.1",
+  "description": "MCP server for secure filesystem access",
+  "keywords": [
+    "mcp",
+    "filesystem",
+    "model-context-protocol",
+    "claude",
+    "anthropic",
+    "ai",
+    "file-operations",
+    "typescript"
+  ],
+  "author": {
+    "name": "Gabriel Maia",
+    "url": "https://github.com/gabrielmaialva33"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabrielmaialva33/mcp-filesystem.git"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "main": "build/src/index.js",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "mcp-filesystem": "build/src/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "ts-node --esm src/index.ts",
+    "build": "tsc && shx chmod +x build/src/index.js",
+    "start": "node build/src/index.js",
+    "watch": "tsc --watch",
+    "clean": "rimraf build coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "prepare": "husky",
+    "prepublishOnly": "pnpm run build"
+  },
+  "eslintConfig": {
+    "extends": "@adonisjs/eslint-config/app"
+  },
+  "prettier": "@adonisjs/prettier-config",
+  "devDependencies": {
+    "@adonisjs/eslint-config": "2.0.0",
+    "@adonisjs/prettier-config": "^1.4.4",
+    "@adonisjs/tsconfig": "^1.4.0",
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "@types/diff": "^7.0.2",
+    "@types/minimatch": "^5.1.2",
+    "@types/node": "^22.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.29.0",
+    "@typescript-eslint/parser": "^8.29.0",
+    "@vitest/coverage-v8": "^3.1.1",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-adonis": "^2.1.1",
+    "eslint-plugin-prettier": "^5.2.6",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "shx": "^0.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.1"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "diff": "^7.0.0",
+    "minimatch": "^10.0.1",
+    "zod": "^3.24.2",
+    "zod-to-json-schema": "^3.24.5"
+  },
+  "packageManager": "pnpm@10.7.1+sha512.2d92c86b7928dc8284f53494fb4201f983da65f0fb4f0d40baafa5cf628fa31dae3e5968f12466f17df7e97310e30f343a648baea1b9b350685dafafffdf5808"
+}
