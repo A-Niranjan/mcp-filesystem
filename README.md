@@ -39,6 +39,10 @@
 **MCP Filesystem Server** provides secure filesystem access for AI models through the Model Context Protocol. It
 enforces strict path validation and only allows access to predefined directories.
 
+<a href="https://glama.ai/mcp/servers/@A-Niranjan/mcp-filesystem">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@A-Niranjan/mcp-filesystem/badge" alt="Filesystem Server MCP server" />
+</a>
+
 <br>
 
 ## :computer: Technologies
